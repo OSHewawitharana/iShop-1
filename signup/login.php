@@ -1,6 +1,11 @@
+<?php 
+include ("../db_connect.php")
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,7 +43,7 @@ body {
 <div id="content_area">
   <div id="login-page" class="row">
     <div class="col s12 z-depth-6 card-panel">
-      <form class="login-form">
+      <form class="login-form" action="login.php" method="POST">
         <div class="row">
           <div class="input-field col s12 center">
             <img src="../img/logo.png" alt="" class="responsive-img valign profile-image-login">
@@ -48,14 +53,14 @@ body {
         <div class="row margin">
           <div class="input-field col s12">
             <i class="mdi-social-person-outline prefix"></i>
-            <input class="validate" id="email" type="email">
+            <input class="validate" id="email" type="email" name="email">
             <label for="email" data-error="wrong" data-success="right" class="center-align">Email</label>
           </div>
         </div>
         <div class="row margin">
           <div class="input-field col s12">
             <i class="mdi-action-lock-outline prefix"></i>
-            <input id="password" type="password">
+            <input id="password" type="password" name="password">
             <label for="password">Password</label>
           </div>
         </div>
@@ -67,12 +72,15 @@ body {
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <a href="login.php" class="btn waves-effect waves-light col s12">Log In</a>
+          <input type="submit" name="login" value="login" class="btn" align="right">
+            <!-- <a href="login.php" class="btn waves-effect waves-light col s12">Log In</a> -->
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6 m6 l6">
-            <p class="margin medium-small"><a href="signup.php">Sign Up Now!</a></p>
+            <p class="margin medium-small">
+            <!-- <input type="submit" name="login" value="login" class="btn" align="right"> -->
+            <a href="signup.php">Sign Up Now!</a></p>
           </div>
           <div class="input-field col s6 m6 l6">
               <p class="margin right-align medium-small"><a href="forgot-password.php">Forgot password?</a></p>
@@ -109,5 +117,47 @@ body {
    </footer>
   </div>
   </div>
+
+<?php
+    
+if(isset($_POST["login"])){
+
+$email = mysqli_real_escape_string($conn,$_POST['email']);
+$password = mysqli_real_escape_string($conn,$_POST['password']); 
+
+$sql = "SELECT `name` FROM `shopowner` WHERE email='$email' AND password='$password'";
+
+$result_set=mysqli_query($conn, $sql);
+if ($result_set) {
+  if (mysqli_num_rows($result_set)==1){
+    header('location:../index.php');
+  }else{
+    echo "<script type= 'text/javascript'>alert('Sorry! Your Login Name or Password is invalid');</script>";
+  }
+}
+
+/*$result = mysqli_query($conn,$sql);
+var_dump($result);
+$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+var_dump($row);*/
+
+//$active = $row['active'];
+/*$count = mysqli_num_rows($result);
+  
+// If result matched $username and $password, table row must be 1 row
+    
+  if($count == 1) {
+    //session_register("username");
+    $_SESSION['name'] = $name;      
+    header("location: index.php"); //LANDING PAGE          }
+  }else {
+   // echo "<br>" . "<h2>Sorry! Your Login Name or Password is invalid</h2>";
+    echo "<script type= 'text/javascript'>alert('Sorry! Your Login Name or Password is invalid');</script>";
+  }     */ 
+
+$conn->close();
+}
+?>
+
 </body>
 </html>

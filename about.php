@@ -15,7 +15,6 @@
 
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -104,7 +103,7 @@
         <!-- Intro Content -->
         <div class="row">
             <div class="col-lg-6">
-                <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="">
+                <img class="img-fluid rounded mb-4" src="img/About.jpg" alt="about">
             </div>
             <div class="col-lg-6">
                 <h2>iShop</h2>

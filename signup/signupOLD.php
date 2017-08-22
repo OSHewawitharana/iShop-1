@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require ("../db_connect.php");
+include ("../db_connect.php");
  ?>
 
 <!DOCTYPE html>
@@ -141,43 +141,26 @@ body {
         /*$query1="SELECT * FROM `shopowner` WHERE email=`$email`";*/
         $query_run1 = mysqli_query($conn , $query1);
         
-
-        if (mysqli_num_rows($query_run1)>0) {
-          echo "<script type= 'text/javascript'>alert('Sorry! User already exists.Try another one!');</script>";
-
-          //echo "<div class='msg' id='errmsg'>User already exists!</div><br>";
-
-        }else {
-
-          $query2="INSERT INTO shopowner ( `name`, `email`, `password`) VALUES ('$name', '$email','$password')";
+        if (!$query_run1) {
+          $query2= "INSERT INTO shopowner( name, email, password) VALUES ('$name', '$email','$password')";
           $query_run2 = mysqli_query($conn , $query2);
-
           if ($query_run2) {
-            echo "<script type= 'text/javascript'>alert('User Registered Successfully!');</script>";
-            //echo "<div class='msg' id='sucmsg'>User registered!</div><br>";
+            echo "<div class='msg' id='sucmsg'>User registered!</div><br>";
           } else {
             
           //  var_dump($query_run1);
             //echo mysqli_connect_error();
-            echo "<script type= 'text/javascript'>alert('Error in Registration!');</script>";
-            //echo "<div class='msg' id='errmsg'>Error in Registration!</div><br>";
+            echo "<div class='msg' id='errmsg'>Error in Registration!</div><br>";
           }
+        }elseif(mysqli_num_rows($query_run1)>0) {
+          /*echo "<div class='msg' id='errmsg'>User already exists.Try another one!</div><br>";*/
+          echo "<script type= 'text/javascript'>alert('Sorry! User already exists.Try another one!');</script>";
         }
+      }else {
+        //echo mysqli_error($conn);
+        echo "<div class='msg' id='errmsg'>Password and confirm password does not match!</div><br>";
       }
-
-      else {
-        echo "<script type= 'text/javascript'>alert('Password mismatched!');</script>";
-        //echo "Password and retyping password do not match";
-      }
-      //   }elseif(mysqli_num_rows($query_run1)>0) {
-      //     /*echo "<div class='msg' id='errmsg'>User already exists.Try another one!</div><br>";*/
-      //     echo "<script type= 'text/javascript'>alert('Sorry! User already exists.Try another one!');</script>";
-      //   }
-      // }else {
-      //   echo mysqli_error($conn);
-      //   echo "<div class='msg' id='errmsg'>Password and confirm password does not match!</div><br>";
-      // }
-}
+    }
   
   ?>
 

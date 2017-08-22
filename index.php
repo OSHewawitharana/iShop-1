@@ -67,42 +67,6 @@
                         <a class="dropdown-item" href="./signup/signup.php"> SignUp</a>
                     </div>
                 </li>
-
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Portfolio
-                        </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                        <a class="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
-                        <a class="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
-                        <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
-                        <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
-                        <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Blog
-                        </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                        <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
-                        <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
-                        <a class="dropdown-item" href="blog-post.html">Blog Post</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Other Pages
-                        </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                        <a class="dropdown-item" href="full-width.html">Full Width Page</a>
-                        <a class="dropdown-item" href="sidebar.html">Sidebar Page</a>
-                        <a class="dropdown-item" href="faq.html">FAQ</a>
-                        <a class="dropdown-item" href="404.html">404</a>
-                        <a class="dropdown-item" href="pricing.html">Pricing Table</a>
-                    </div>
-                </li> -->
-
             </ul>
         </div>
     </nav>
@@ -116,24 +80,22 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <!-- Slide One - Set the background image for this slide in the line below -->
-                <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item active" style="background-image: url('./img/1.jpg')">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>First Slide</h3>
-                        <p>This is a description for the first slide.</p>
                     </div>
                 </div>
                 <!-- Slide Two - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item" style="background-image: url('./img/2.jpg')">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>Second Slide</h3>
-                        <p>This is a description for the second slide.</p>
                     </div>
                 </div>
                 <!-- Slide Three - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item" style="background-image: url('./img/3.jpg')">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>Third Slide</h3>
-                        <p>This is a description for the third slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('./img/4.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
                     </div>
                 </div>
             </div>
@@ -161,9 +123,9 @@
                     <div class="card-body">
                         <p class="card-text">You can signup/login to our databse and update the items available on that day! So that cusotmers who want buy any of items in the list will see your shop there.</p>
                     </div>
-                    <div class="card-footer">
+                    <!-- <div class="card-footer">
                         <a href="./services.php" class="btn btn-primary">Learn More</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-lg-4 mb-4">
@@ -172,9 +134,9 @@
                     <div class="card-body">
                         <p class="card-text">Make your cusotmer known of what offers you run on that day! You can run promotional period of offers as well</p>
                     </div>
-                    <div class="card-footer">
+                    <!-- <div class="card-footer">
                         <a href="./services.php" class="btn btn-primary">Learn More</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-lg-4 mb-4">
@@ -183,70 +145,9 @@
                     <div class="card-body">
                         <p class="card-text">We set up a beacon at the your door step! So what you offer today will reach to every customer passing buy, who uses BLE.</p>
                     </div>
-                    <div class="card-footer">
+                    <!-- <div class="card-footer">
                         <a href="./services.php" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Portfolio Section -->
-        <!-- <h2>Portfolio Heading</h2>
-
-        <div class="row">
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title"><a href="#">Project One</a></h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title"><a href="#">Project Two</a></h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title"><a href="#">Project Three</a></h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title"><a href="#">Project Four</a></h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title"><a href="#">Project Five</a></h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title"><a href="#">Project Six</a></h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -256,16 +157,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <h2>Why Beacons ?</h2>
-                <p>Watch this amazing video by Estimote! You will feel lucky..</p>
-                <!-- <ul>
-                    <li><strong>Bootstrap v4</strong>
-                    </li>
-                    <li>jQuery</li>
-                    <li>Font Awesome</li>
-                    <li>Working contact form with validation</li>
-                    <li>Unstyled page elements for easy customization</li>
-                </ul> -->
-              <!--   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p> -->
+                <p>Watch this amazing video by Estimote about what we actually do! You will feel lucky..</p>
             </div>
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/SrsHBjzt2E8?ecver=1" frameborder="0" allowfullscreen></iframe>
