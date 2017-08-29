@@ -1,6 +1,6 @@
 <?php
 $SESSION["name"] = "name";
-$servername = "localhost:3312";
+$servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "ishop";
