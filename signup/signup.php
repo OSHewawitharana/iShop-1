@@ -132,6 +132,8 @@ body {
       $password = $_POST['password'];
       $rpassword = $_POST['rpassword'];
 
+      $_SESSION['name']=$name;
+
       // var_dump($conn);
        // var_dump($name); var_dump($email); var_dump($password); var_dump($rpassword);
 
@@ -153,7 +155,12 @@ body {
           $query_run2 = mysqli_query($conn , $query2);
 
           if ($query_run2) {
+            /*header('location:../index.php');*/
+            $_SESSION['user']='user';
             echo "<script type= 'text/javascript'>alert('User Registered Successfully!');</script>";
+            echo("<script>location.href = '../index.php?msg=$msg';</script>");
+            /*$_SESSION['name']=$name;*/
+           /* header('location:../index.php');*/
             //echo "<div class='msg' id='sucmsg'>User registered!</div><br>";
           } else {
             
@@ -166,7 +173,7 @@ body {
       }
 
       else {
-        echo "<script type= 'text/javascript'>alert('Password mismatched!');</script>";
+        echo "<script type= 'text/javascript'>alert('Password mismatch!');</script>";
         //echo "Password and retyping password do not match";
       }
       //   }elseif(mysqli_num_rows($query_run1)>0) {

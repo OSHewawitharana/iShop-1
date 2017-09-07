@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include ("../db_connect.php")
  ?>
 
@@ -48,6 +49,13 @@ body {
           <div class="input-field col s12 center">
             <img src="../img/logo.png" alt="" class="responsive-img valign profile-image-login">
             <p class="center login-form-text">Login Form</p>
+          </div>
+        </div>
+       <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="name" type="text" class="validate" name="name">
+            <label for="name" class="center-align">Shop Name</label>
           </div>
         </div>
         <div class="row margin">
@@ -122,15 +130,21 @@ body {
     
 if(isset($_POST["login"])){
 
+$name = $_POST['name'];
 $email = mysqli_real_escape_string($conn,$_POST['email']);
 $password = mysqli_real_escape_string($conn,$_POST['password']); 
+//$_SESSION['name']=$name;
 
 $sql = "SELECT `name` FROM `shopowner` WHERE email='$email' AND password='$password'";
+
 
 $result_set=mysqli_query($conn, $sql);
 if ($result_set) {
   if (mysqli_num_rows($result_set)==1){
-    header('location:../index.php');
+    $_SESSION['name']=$name;
+    $_SESSION['user']='user';
+    /*header('location:../index.php');*/
+    echo("<script>location.href = '../index.php?msg=$msg';</script>");
   }else{
     echo "<script type= 'text/javascript'>alert('Sorry! Your Login Name or Password is invalid');</script>";
   }

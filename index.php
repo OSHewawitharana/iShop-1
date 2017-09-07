@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +41,9 @@
 
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="index.php">iShop</a>
+        <a class="navbar-brand" href="index.php">Welcome <?php if (isset($_SESSION['user'])) {
+            echo $_SESSION['name'];
+            } ?> !</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -59,10 +65,13 @@
                     <a class="nav-link" href="faq.php">FAQ</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            My Account
-                        </a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>         
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                    <?php                
+                    if (isset($_SESSION['user'])){
+                        echo "<input type='button' value='Log Out' onclick='session_destroy()' />";
+                    }
+                    ?>
                         <a class="dropdown-item" href="./signup/login.php"> Login</a>
                         <a class="dropdown-item" href="./signup/signup.php"> SignUp</a>
                     </div>
@@ -179,7 +188,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+            <p class="m-0 text-center text-white">Copyright &copy; iShop 2017</p>
         </div>
         <!-- /.container -->
     </footer>

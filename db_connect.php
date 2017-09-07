@@ -1,5 +1,4 @@
 <?php
-$SESSION["name"] = "name";
 $servername = "localhost";
 $username = "root";
 $password = "";
