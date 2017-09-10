@@ -69,13 +69,16 @@ session_start();
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
                         <!-- <input type='button' value='Log in Here' onclick='./signup/login.php' outline='none'> -->
 
-                        <a class="btn btn-default" href="./signup/login.php"> Login</a><br>
-                        <a class="btn btn-default" href="./signup/signup.php"> SignUp</a>
+                        <!-- <a class="btn btn-default" href="./signup/login.php"> Login</a><br>
+                        <a class="btn btn-default" href="./signup/signup.php"> SignUp</a> -->
                         <?php                
                         if (isset($_SESSION['user'])){
                            echo "<button type='button' class='btn btn-default' style='background-color:white'><a href='./signup/logout.php'  style='text-decoration:none'> Log Out</a> </button>";
                             /*echo "<a class="dropdown-item" name="logout" href="./signup/logout.php" onclick='./signup/logout.php'> Log Out</a>";*/
                             //<a class="dropdown-item" href="./signup/logout.php"> Log Out</a>
+                        }else{
+                            echo "<button type='button' class='btn btn-default' style='background-color:white'><a href='./signup/login.php'  style='text-decoration:none'> Log In</a> </button><br>";
+                            echo "<button type='button' class='btn btn-default' style='background-color:white'><a href='./signup/signup.php'  style='text-decoration:none'> SignUp</a> </button>";
                         }
                         ?>
                     </div>
