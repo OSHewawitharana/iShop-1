@@ -67,13 +67,17 @@ session_start();
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>         
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                    <?php                
-                    if (isset($_SESSION['user'])){
-                        echo "<input type='button' value='Log Out' onclick='session_destroy()' />";
-                    }
-                    ?>
-                        <a class="dropdown-item" href="./signup/login.php"> Login</a>
-                        <a class="dropdown-item" href="./signup/signup.php"> SignUp</a>
+                        <!-- <input type='button' value='Log in Here' onclick='./signup/login.php' outline='none'> -->
+
+                        <a class="btn btn-default" href="./signup/login.php"> Login</a><br>
+                        <a class="btn btn-default" href="./signup/signup.php"> SignUp</a>
+                        <?php                
+                        if (isset($_SESSION['user'])){
+                           echo "<button type='button' class='btn btn-default' style='background-color:white'><a href='./signup/logout.php'  style='text-decoration:none'> Log Out</a> </button>";
+                            /*echo "<a class="dropdown-item" name="logout" href="./signup/logout.php" onclick='./signup/logout.php'> Log Out</a>";*/
+                            //<a class="dropdown-item" href="./signup/logout.php"> Log Out</a>
+                        }
+                        ?>
                     </div>
                 </li>
             </ul>
