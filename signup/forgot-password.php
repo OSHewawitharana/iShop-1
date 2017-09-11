@@ -1,6 +1,5 @@
 <?php 
 session_start();
-include ("../db_connect.php")
  ?>
 
 <!DOCTYPE html>
@@ -93,7 +92,7 @@ body {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js">
   </script>
 
-
+<!-- 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -103,7 +102,7 @@ body {
   ga('create', 'UA-27820211-3', 'auto');
   ga('send', 'pageview');
 
-</script><script src="//load.sumome.com/" data-sumo-site-id="1cf2c3d548b156a57050bff06ee37284c67d0884b086bebd8e957ca1c34e99a1" async="async"></script>
+</script><script src="//load.sumome.com/" data-sumo-site-id="1cf2c3d548b156a57050bff06ee37284c67d0884b086bebd8e957ca1c34e99a1" async="async"></script> -->
 
  <footer class="page-footer">
     <p style="text-align: center; color: white">© 2017 iShop Inc. </p>       
