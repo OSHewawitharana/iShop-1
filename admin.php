@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +38,7 @@
 
 	.footer-copyright .container,
 	.footer-copyright .container a {
-	  color: #BCC2E2;
+	  color: #8B8B8B;
 	}
 
 	.fab-tip {
@@ -42,7 +46,7 @@
 	  right: 85px;
 	  padding: 0px 0.5rem;
 	  text-align: right;
-	  background-color: #323232;
+	  background-color: #999393 ;
 	  border-radius: 2px;
 	  color: #FFF;
 	  width: auto;
@@ -54,12 +58,12 @@
 
   <ul id="slide-out" class="side-nav fixed z-depth-2">
     <li class="center no-padding">
-      <div class="indigo darken-2 white-text" style="height: 180px;">
+      <div class="grey darken-2 white-text" style="height: 180px;">
         <div class="row">
-          <img style="margin-top: 5%;" width="100" height="100" src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463990208/photo_dkkrxc.png" class="circle responsive-img" />
+          <img style="margin-top: 5%;" width="100" height="100" src=# class="circle responsive-img" />
 
           <p style="margin-top: -13%;">
-            Admin Name
+            Oshani
           </p>
         </div>
       </div>
@@ -69,7 +73,7 @@
 
     <ul class="collapsible" data-collapsible="accordion">
       <li id="dash_users">
-        <div id="dash_users_header" class="collapsible-header waves-effect"><b>Users</b></div>
+        <div id="dash_users_header" class="collapsible-header waves-effect"><b>Shops</b></div>
         <div id="dash_users_body" class="collapsible-body">
           <ul>
             <li id="users_seller">
@@ -129,13 +133,15 @@
 
   <header>
     <ul class="dropdown-content" id="user_dropdown">
-      <li><a class="indigo-text" href="#!">Profile</a></li>
-      <li><a class="indigo-text" href="#!">Logout</a></li>
+      <!-- <li><a class="indigo-text" href="#!">Profile</a></li> -->
+      <li><a class="indigo-text" href="./signup/logout.php">Logout</a></li>
     </ul>
 
- <!--    <nav class="indigo" role="navigation">
+    <nav class="grey" role="navigation">
       <div class="nav-wrapper">
-        <a data-activates="slide-out" class="button-collapse show-on-large" href="#!"><img style="margin-top: 17px; margin-left: 5px;" src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989873/smaller-main-logo_3_bm40iv.gif" /></a>
+        <a class="navbar-brand" href="index.php">iShop</a>
+        <!--  <img src="../img/logo.png" alt="" class="responsive-img valign profile-image-login"> -->
+        <!-- <a data-activates="slide-out" class="button-collapse show-on-large" href="#!"><img style="margin-top: 17px; margin-left: 5px;" src="./signup/img/logo.png" /></a> -->
 
         <ul class="right hide-on-med-and-down">
           <li>
@@ -146,11 +152,11 @@
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
       </div>
     </nav>
- -->
+
     <nav>
-      <div class="nav-wrapper indigo darken-2">
-        <a style="margin-left: 20px;" class="breadcrumb" href="#!">Admin</a>
-        <a class="breadcrumb" href="#!">Index</a>
+      <div class="nav-wrapper grey darken-2">
+        <!-- <a style="margin-left: 20px;" class="breadcrumb" href="#!">iShop</a> -->
+        <a class="breadcrumb" href="#!">Admin Index</a>
 
         <div style="margin-right: 20px;" id="timestamp" class="right"></div>
       </div>
@@ -163,7 +169,7 @@
         <div style="padding: 35px;" align="center" class="card">
           <div class="row">
             <div class="left card-title">
-              <b>User Management</b>
+              <b>Shop List</b>
             </div>
           </div>
 
@@ -171,7 +177,7 @@
             <a href="#!">
               <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
                 <img src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989968/seller_rcnkab.png" class="responsive-img" /><br>
-                <span class="indigo-text text-lighten-1"><h5>Seller</h5></span>
+                <span class="indigo-text text-lighten-1"><h5>Seller Info</h5></span>
               </div>
             </a>
             <div class="col s1">&nbsp;</div>
@@ -180,7 +186,7 @@
             <a href="#!">
               <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
                 <img src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989969/people_2_knqa3y.png" class="responsive-img" /><br>
-                <span class="indigo-text text-lighten-1"><h5>Customer</h5></span>
+                <span class="indigo-text text-lighten-1"><h5>Ratings</h5></span>
               </div>
             </a>
           </div>
@@ -191,14 +197,14 @@
         <div style="padding: 35px;" align="center" class="card">
           <div class="row">
             <div class="left card-title">
-              <b>Product Management</b>
+              <b>Requests</b>
             </div>
           </div>
           <div class="row">
             <a href="#!">
               <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
                 <img src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989970/product_mdq6fq.png" class="responsive-img" /><br>
-                <span class="indigo-text text-lighten-1"><h5>Product</h5></span>
+                <span class="indigo-text text-lighten-1"><h5>Subscribe Requests</h5></span>
               </div>
             </a>
 
@@ -208,7 +214,7 @@
             <a href="#!">
               <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
                 <img src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989970/stack_rwg2mz.png" class="responsive-img" /><br>
-                <span class="indigo-text text-lighten-1"><h5>Orders</h5></span>
+                <span class="indigo-text text-lighten-1"><h5>Unsubscribe Requests</h5></span>
               </div>
             </a>
           </div>
@@ -221,11 +227,11 @@
         <div style="padding: 35px;" align="center" class="card">
           <div class="row">
             <div class="left card-title">
-              <b>Brand Management</b>
+              <b>Site Analytics</b>
             </div>
           </div>
 
-          <div class="row">
+          <!-- <div class="row">
             <a href="#!">
               <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
                 <img src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989969/brand_lldqpu.png" class="responsive-img" /><br>
@@ -242,7 +248,7 @@
                 <span class="indigo-text text-lighten-1"><h5>Sub Brand</h5></span>
               </div>
             </a>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -250,10 +256,10 @@
         <div style="padding: 35px;" align="center" class="card">
           <div class="row">
             <div class="left card-title">
-              <b>Category Management</b>
+              <b>Database</b>
             </div>
           </div>
-          <div class="row">
+         <!--  <div class="row">
             <a href="#!">
               <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
                 <img src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989969/squares_dylwo9.png" class="responsive-img" /><br>
@@ -269,7 +275,7 @@
                 <span class="truncate indigo-text text-lighten-1"><h5>Sub Category</h5></span>
               </div>
             </a>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -303,7 +309,7 @@
     </div>
   </main>
 
-  <footer class="indigo page-footer">
+  <footer class="grey page-footer">
     <div class="container">
       <div class="row">
         <div class="col s12">
@@ -311,9 +317,9 @@
         </div>
       </div>
     </div>
-    <div class="footer-copyright">
+    <div class="white footer-copyright">
       <div class="container">
-        <span>Copyright &copy; iShop@2017 2017</span>
+        <span>Copyright &copy; iShop@2017</span>
       </div>
     </div>
   </footer>
