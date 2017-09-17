@@ -126,34 +126,25 @@ body {
       //var_dump($_POST['signup']);
       //var_dump($conn);
   if (isset($_POST['signup'])) {
-
       $name = $_POST['name'];
       $email = $_POST['email'];
       $password = $_POST['password'];
       $rpassword = $_POST['rpassword'];
-
       $_SESSION['name']=$name;
-
       // var_dump($conn);
        // var_dump($name); var_dump($email); var_dump($password); var_dump($rpassword);
-
       if ($password == $rpassword) {
         //echo'here';
          $query1= "SELECT * FROM shopowner WHERE ShopOwnerEmail='$email'";
         /*$query1="SELECT * FROM `shopowner` WHERE email=`$email`";*/
         $query_run1 = mysqli_query($conn , $query1);
         
-
         if (mysqli_num_rows($query_run1)>0) {
           echo "<script type= 'text/javascript'>alert('Sorry! User already exists.Try another one!');</script>";
-
           //echo "<div class='msg' id='errmsg'>User already exists!</div><br>";
-
         }else {
-
           $query2="INSERT INTO `shopowner`(`ShopOwnerName`, `ShopOwnerEmail`, `ShopOwnerPassword`) VALUES ('$name', '$email','$password')";
           $query_run2 = mysqli_query($conn , $query2);
-
           if ($query_run2) {
             /*header('location:../index.php');*/
             $_SESSION['user']='user';
@@ -171,7 +162,6 @@ body {
           }
         }
       }
-
       else {
         echo "<script type= 'text/javascript'>alert('Password mismatch!');</script>";
         //echo "Password and retyping password do not match";
