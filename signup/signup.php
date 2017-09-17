@@ -139,7 +139,7 @@ body {
 
       if ($password == $rpassword) {
         //echo'here';
-         $query1= "SELECT * FROM shopowner WHERE email='$email'";
+         $query1= "SELECT * FROM shopowner WHERE ShopOwnerEmail='$email'";
         /*$query1="SELECT * FROM `shopowner` WHERE email=`$email`";*/
         $query_run1 = mysqli_query($conn , $query1);
         
@@ -151,7 +151,7 @@ body {
 
         }else {
 
-          $query2="INSERT INTO shopowner ( `name`, `email`, `password`) VALUES ('$name', '$email','$password')";
+          $query2="INSERT INTO `shopowner`(`ShopOwnerName`, `ShopOwnerEmail`, `ShopOwnerPassword`) VALUES ('$name', '$email','$password')";
           $query_run2 = mysqli_query($conn , $query2);
 
           if ($query_run2) {

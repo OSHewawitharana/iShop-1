@@ -43,7 +43,7 @@ session_start();
 
 	.fab-tip {
 	  position: fixed;
-	  right: 85px;
+	  right: 50px;
 	  padding: 0px 0.5rem;
 	  text-align: right;
 	  background-color: #999393 ;
@@ -137,17 +137,17 @@ session_start();
       <li><a class="indigo-text" href="./signup/logout.php">Logout</a></li>
     </ul>
 
-    <nav class="grey" role="navigation">
+    <!-- <nav class="grey" role="navigation">
       <div class="nav-wrapper">
-        <a class="navbar-brand" href="index.php">iShop</a>
+        <a class="navbar-brand" href="index.php">iShop</a> -->
         <!--  <img src="../img/logo.png" alt="" class="responsive-img valign profile-image-login"> -->
         <!-- <a data-activates="slide-out" class="button-collapse show-on-large" href="#!"><img style="margin-top: 17px; margin-left: 5px;" src="./signup/img/logo.png" /></a> -->
 
-        <ul class="right hide-on-med-and-down">
+        <!-- <ul class="right hide-on-med-and-down">
           <li>
             <a class='right dropdown-button' href='' data-activates='user_dropdown'><i class=' material-icons'>account_circle</i></a>
           </li>
-        </ul>
+        </ul> -->
 
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
       </div>
@@ -159,6 +159,11 @@ session_start();
         <a class="breadcrumb" href="#!">Admin Index</a>
 
         <div style="margin-right: 20px;" id="timestamp" class="right"></div>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a class='right dropdown-button' href='' data-activates='user_dropdown'><i class=' material-icons'>account_circle</i></a>
+          </li>
+        </ul>
       </div>
     </nav>
   </header>

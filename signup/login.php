@@ -139,7 +139,7 @@ if ($name=='admin' && $email=='ishop@123' && $password=='ishop@2017') {
    echo("<script>location.href = '../admin.php?msg=$msg';</script>");
 }else{
 
-$sql = "SELECT `name` FROM `shopowner` WHERE email='$email' AND password='$password'";
+$sql = "SELECT `ShopOwnerName` FROM `shopowner` WHERE ShopOwnerEmail='$email' AND ShopOwnerPassword='$password'";
 
 
 $result_set=mysqli_query($conn, $sql);
