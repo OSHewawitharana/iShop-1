@@ -119,7 +119,8 @@ session_start();
             </nav>
             <div class="content">
                 <div class="container-fluid">
-                    <div class="row">
+                    <!-- row icon 4 list -->
+                 <!--    <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="card card-stats">
                                 <div class="card-header" data-background-color="orange">
@@ -187,7 +188,7 @@ session_start();
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card">
@@ -213,6 +214,7 @@ session_start();
                                 </div> -->
                                 <div class="card-content">
                                     <h4 class="title">Inquiries made</h4>
+
                                     <p class="category">Last Campaign Performance</p>
                                 </div>
                                 <div class="card-footer">
