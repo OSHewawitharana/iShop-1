@@ -191,11 +191,11 @@ session_start();
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card">
-                                <div class="card-header card-chart" data-background-color="green">
+                                <!-- <div class="card-header card-chart" data-background-color="green">
                                     <div class="ct-chart" id="dailySalesChart"></div>
-                                </div>
+                                </div> -->
                                 <div class="card-content">
-                                    <h4 class="title">Daily </h4>
+                                    <h4 class="title">Shop List</h4>
                                     <p class="category">
                                         <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
                                 </div>
@@ -206,29 +206,13 @@ session_start();
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                         <div class="col-md-4">
                             <div class="card">
-                                <div class="card-header card-chart" data-background-color="orange">
+                                <!-- <div class="card-header card-chart" data-background-color="orange">
                                     <div class="ct-chart" id="emailsSubscriptionChart"></div>
-                                </div>
+                                </div> -->
                                 <div class="card-content">
-                                    <h4 class="title">Subscription Requests</h4>
-                                    <p class="category">Last Campaign Performance</p>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <i class="material-icons">access_time</i> campaign sent 2 days ago
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <div class="card-header card-chart" data-background-color="red">
-                                    <div class="ct-chart" id="completedTasksChart"></div>
-                                </div>
-                                <div class="card-content">
-                                    <h4 class="title">User</h4>
+                                    <h4 class="title">Inquiries made</h4>
                                     <p class="category">Last Campaign Performance</p>
                                 </div>
                                 <div class="card-footer">
@@ -240,6 +224,40 @@ session_start();
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <!-- <div class="card-header card-chart" data-background-color="orange">
+                                    <div class="ct-chart" id="emailsSubscriptionChart"></div>
+                                </div> -->
+                                <div class="card-content">
+                                    <h4 class="title">Subscribe Requests</h4>
+                                    <p class="category">Last Campaign Performance</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">access_time</i> campaign sent 2 days ago
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <!-- <div class="card-header card-chart" data-background-color="red">
+                                    <div class="ct-chart" id="completedTasksChart"></div>
+                                </div> -->
+                                <div class="card-content">
+                                    <h4 class="title">Unsubscribe Requests</h4>
+                                    <p class="category">Last Campaign Performance</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">access_time</i> campaign sent 2 days ago
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+     <!--                <div class="row">
                         <div class="col-lg-6 col-md-12">
                             <div class="card card-nav-tabs">
                                 <div class="card-header" data-background-color="purple">
@@ -458,7 +476,7 @@ session_start();
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <footer class="footer">
