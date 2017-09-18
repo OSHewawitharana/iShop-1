@@ -135,8 +135,8 @@ $email = mysqli_real_escape_string($conn,$_POST['email']);
 $password = mysqli_real_escape_string($conn,$_POST['password']); 
 //$_SESSION['name']=$name;
 
-if ($name=='admin' && $email=='ishop@123' && $password=='ishop@2017') {
-   echo("<script>location.href = '../admin.php?msg=$msg';</script>");
+if ($name=='admin' && $email=='ishop@123.org' && $password=='ishop@2017') {
+   echo("<script>location.href = '../admin2/examples/dashboard.php?msg=$msg';</script>");
 }else{
 
 $sql = "SELECT `ShopOwnerName` FROM `shopowner` WHERE ShopOwnerEmail='$email' AND ShopOwnerPassword='$password'";
