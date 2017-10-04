@@ -196,7 +196,7 @@ session_start();
                                                 <div class="form-group">
                                                     <label>About Me</label>
                                                     <div class="form-group label-floating">
-                                                        
+                                                        <p>about me</p>
                                                         <textarea class="form-control" rows="5"></textarea>
                                                     </div>
                                                 </div>
