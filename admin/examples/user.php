@@ -135,12 +135,12 @@ session_start();
                                                     <input id="username" name="username" type="text" class="form-control">
                                                 </div>
                                             </div>
-                                            <div class="col-md-5">
+                                          <!--   <div class="col-md-5">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">New Password</label>
                                                     <input id="password" name="password" type="password" class="form-control">
                                                 </div>
-                                            </div>    
+                                            </div>  -->   
                                         </div>
                                         <div class="row">
                                             <div class="col-md-5">
@@ -170,7 +170,7 @@ session_start();
                                                   </div>
                                             </div>
                                        </div>
-                                        <div class="row">
+                                         <div class="row">
                                             <div class="col-md-10">
                                                 <div class="form-group">
                                                     <label>About Me</label>
@@ -180,7 +180,6 @@ session_start();
                                                 </div>
                                             </div>
                                         </div>
-                                        
                                         <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
                                         <div class="clearfix"></div>
 
@@ -198,6 +197,25 @@ session_start();
             </footer>
         </div>
     </div>
+
+
+<?php 
+      //var_dump($_POST['signup']);
+      //var_dump($conn);
+  if (isset($_POST['user'])) {
+      $username = $_POST['username'];
+      $fname = $_POST['fname'];
+      $lname = $_POST['lname'];
+      $email = $_POST['email'];
+      $address = $_POST['address'];
+      $aboutme = $_POST['aboutme'];
+
+     $query1= "UPDATE `Administrator` SET `username`=[$username],`fname`=[$fname],`lname`=[$lname],`email`=[$email],`address`=[$address],`aboutme`=[$aboutme],`password`=[value-7] WHERE `Admin ID`=[$adminid]"
+
+      
+}
+  
+  ?>
 </body>
 <!--   Core JS Files   -->
 <script src="../assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
