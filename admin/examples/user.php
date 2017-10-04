@@ -137,10 +137,10 @@ session_start();
                                             </div>
                                             <div class="col-md-5">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Email address</label>
-                                                    <input id="email" name="email" type="email" class="form-control">
+                                                    <label class="control-label">New Password</label>
+                                                    <input id="password" name="password" type="password" class="form-control">
                                                 </div>
-                                            </div>
+                                            </div>    
                                         </div>
                                         <div class="row">
                                             <div class="col-md-5">
@@ -157,13 +157,19 @@ session_start();
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-10">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Address</label>
-                                                    <input id="address" name="address" type="text" class="form-control">
-                                                </div>
+                                            <div class="col-md-5">
+                                                  <div class="form-group label-floating">
+                                                      <label class="control-label">Email address</label>
+                                                      <input id="email" name="email" type="email" class="form-control">
+                                                  </div>
                                             </div>
-                                        </div>
+                                            <div class="col-md-5">
+                                                  <div class="form-group label-floating">
+                                                      <label class="control-label">Address</label>
+                                                      <input id="address" name="address" type="text" class="form-control">
+                                                  </div>
+                                            </div>
+                                       </div>
                                         <div class="row">
                                             <div class="col-md-10">
                                                 <div class="form-group">
@@ -174,12 +180,7 @@ session_start();
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-5">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">New Password</label>
-                                                    <input id="password" name="password" type="password" class="form-control">
-                                                </div>
-                                            </div>
+                                        
                                         <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
                                         <div class="clearfix"></div>
 
