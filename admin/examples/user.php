@@ -226,7 +226,7 @@ require ("../../db_connect.php");
       $email = $_POST['email'];
       $address = $_POST['address'];
       $aboutme = $_POST['aboutme'];
-
+      $adminid = $_POST['adminid'];
 
       $query1= "UPDATE `Administrator` SET `username`=[$username],`fname`=[$fname],`lname`=[$lname],`email`=[$email],`address`=[$address],`aboutme`=[$aboutme], WHERE `Admin ID`=[$adminid]" ;
 
