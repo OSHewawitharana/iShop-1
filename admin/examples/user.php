@@ -130,18 +130,18 @@ require ("../../db_connect.php");
                                 <div class="card-content">
                                     <form action="user.php" method="POST">
                                         <div class="row">
+                                              <div class="col-md-5">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Admin ID</label>
+                                                    <input id="adminid" name="adminid" type="text" class="form-control">
+                                                </div>
+                                            </div>  
                                             <div class="col-md-5">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Username</label>
                                                     <input id="username" name="username" type="text" class="form-control">
                                                 </div>
-                                            </div>
-                                          <!--   <div class="col-md-5">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">New Password</label>
-                                                    <input id="password" name="password" type="password" class="form-control">
-                                                </div>
-                                            </div>  -->   
+                                            </div>  
                                         </div>
                                         <div class="row">
                                             <div class="col-md-5">
@@ -216,5 +216,28 @@ require ("../../db_connect.php");
             </footer>
         </div>
     </div>
+
+<?php 
+      /*var_dump($conn)*/;
+  if (isset($_POST['user'])) {
+      $username = $_POST['username'];
+      $fname = $_POST['fname'];
+      $lname = $_POST['lname'];
+      $email = $_POST['email'];
+      $address = $_POST['address'];
+      $aboutme = $_POST['aboutme'];
+
+
+      $query1= "UPDATE `Administrator` SET `username`=[$username],`fname`=[$fname],`lname`=[$lname],`email`=[$email],`address`=[$address],`aboutme`=[$aboutme], WHERE `Admin ID`=[$adminid]" ;
+
+      /*var_dump($query1);*/
+
+      $query_run1 = mysqli_query($conn , $query1);
+
+      /*var_dump($query_run1);*/
+}
+  $conn->close();
+  ?>
+
 </body>
 </html>
