@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require ("../../db_connect.php");
 ?>
 
 
@@ -19,7 +20,7 @@ session_start();
     <!--  Material Dashboard CSS    -->
     <link href="../assets/css/material-dashboard.css?v=1.2.0" rel="stylesheet" />
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="../assets/css/demo.css" rel="stylesheet" />
+    <!-- //<link href="../assets/css/demo.css" rel="stylesheet" /> -->
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
@@ -190,6 +191,24 @@ session_start();
                     </div>
                 </div>
             </div>
+             <!--   Core JS Files   -->
+                <script src="../assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+                <script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+                <script src="../assets/js/material.min.js" type="text/javascript"></script>
+                <!--  Charts Plugin -->
+                <script src="../assets/js/chartist.min.js"></script>
+                <!--  Dynamic Elements plugin -->
+                <script src="../assets/js/arrive.min.js"></script>
+                <!--  PerfectScrollbar Library -->
+                <script src="../assets/js/perfect-scrollbar.jquery.min.js"></script>
+                <!--  Notifications Plugin    -->
+                <script src="../assets/js/bootstrap-notify.js"></script>
+                <!--  Google Maps Plugin    -->
+                <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+                <!-- Material Dashboard javascript methods -->
+                <script src="../assets/js/material-dashboard.js?v=1.2.0"></script>
+                <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+                <script src="../assets/js/demo.js"></script>
             <footer class="footer">
                 <div class="container-fluid">
                    <p class="m-0 text-center text-white">Copyright &copy; iShop 2017</p>
@@ -197,43 +216,5 @@ session_start();
             </footer>
         </div>
     </div>
-
-
-<?php 
-      //var_dump($_POST['signup']);
-      //var_dump($conn);
-  if (isset($_POST['user'])) {
-      $username = $_POST['username'];
-      $fname = $_POST['fname'];
-      $lname = $_POST['lname'];
-      $email = $_POST['email'];
-      $address = $_POST['address'];
-      $aboutme = $_POST['aboutme'];
-
-     $query1= "UPDATE `Administrator` SET `username`=[$username],`fname`=[$fname],`lname`=[$lname],`email`=[$email],`address`=[$address],`aboutme`=[$aboutme],`password`=[value-7] WHERE `Admin ID`=[$adminid]"
-
-      
-}
-  
-  ?>
 </body>
-<!--   Core JS Files   -->
-<script src="../assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
-<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="../assets/js/material.min.js" type="text/javascript"></script>
-<!--  Charts Plugin -->
-<script src="../assets/js/chartist.min.js"></script>
-<!--  Dynamic Elements plugin -->
-<script src="../assets/js/arrive.min.js"></script>
-<!--  PerfectScrollbar Library -->
-<script src="../assets/js/perfect-scrollbar.jquery.min.js"></script>
-<!--  Notifications Plugin    -->
-<script src="../assets/js/bootstrap-notify.js"></script>
-<!--  Google Maps Plugin    -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-<!-- Material Dashboard javascript methods -->
-<script src="../assets/js/material-dashboard.js?v=1.2.0"></script>
-<!-- Material Dashboard DEMO methods, don't include it in your project! -->
-<script src="../assets/js/demo.js"></script>
-
 </html>
