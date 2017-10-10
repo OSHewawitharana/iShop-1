@@ -218,7 +218,8 @@ require ("../../db_connect.php");
     </div>
 
 <?php 
-      /*var_dump($conn)*/;
+      /*var_dump($conn);
+      echo "A";*/
   if (isset($_POST['user'])) {
       $username = $_POST['username'];
       $fname = $_POST['fname'];
