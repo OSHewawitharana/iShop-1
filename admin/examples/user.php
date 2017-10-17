@@ -136,12 +136,12 @@ require ("../../db_connect.php");
                                                     <input id="adminid" name="adminid" type="text" class="form-control">
                                                 </div>
                                             </div>  
-                                            <div class="col-md-5">
+                                            <!-- <div class="col-md-5">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Username</label>
                                                     <input id="username" name="username" type="text" class="form-control">
                                                 </div>
-                                            </div>  
+                                            </div>   -->
                                         </div>
                                         <div class="row">
                                             <div class="col-md-5">
@@ -230,7 +230,7 @@ require ("../../db_connect.php");
       $aboutme = $_POST['aboutme'];
      
 
-      $query1= "UPDATE `Administrator` SET `username`=[$username],`fname`=[$fname],`lname`=[$lname],`email`=[$email],`address`=[$address],`aboutme`=[$aboutme], WHERE `Admin ID`=[$adminid]" ;
+      $query1= "UPDATE `Administrator` SET `username`=[$username],`fname`=[$fname],`lname`=[$lname],`email`=[$email],`address`=[$address],`aboutme`=[$aboutme], WHERE `adminid`=[$adminid]" ;
 
       /*var_dump($query1);*/
 
