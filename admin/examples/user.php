@@ -128,7 +128,7 @@ require ("../../db_connect.php");
                                     <h4 class="title">Edit Profile</h4>
                                 </div>
                                 <div class="card-content">
-                                    <form action="user.php" method="POST">
+                                    <form action="user.php" method="post">
                                         <div class="row">
                                               <div class="col-md-5">
                                                 <div class="form-group label-floating">
@@ -221,13 +221,14 @@ require ("../../db_connect.php");
       /*var_dump($conn);
       echo "A";*/
   if (isset($_POST['user'])) {
+      $adminid = $_POST['adminid'];
       $username = $_POST['username'];
       $fname = $_POST['fname'];
       $lname = $_POST['lname'];
       $email = $_POST['email'];
       $address = $_POST['address'];
       $aboutme = $_POST['aboutme'];
-      $adminid = $_POST['adminid'];
+     
 
       $query1= "UPDATE `Administrator` SET `username`=[$username],`fname`=[$fname],`lname`=[$lname],`email`=[$email],`address`=[$address],`aboutme`=[$aboutme], WHERE `Admin ID`=[$adminid]" ;
 
