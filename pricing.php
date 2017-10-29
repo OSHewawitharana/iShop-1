@@ -52,8 +52,14 @@ session_start();
                             My Account
                         </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                        <a class="dropdown-item" href="./signup/login.php"> Login</a>
-                        <a class="dropdown-item" href="./signup/signup.php"> SignUp</a>
+                        <?php                
+                        if (isset($_SESSION['user'])){
+                           echo "<button type='button' class='btn btn-default' style='background-color:white'><a href='./signup/logout.php'  style='text-decoration:none'> Log Out</a> </button>";
+                        }else{
+                            echo "<button type='button' class='btn btn-default' style='background-color:white'><a href='./signup/login.php'  style='text-decoration:none'> Log In</a> </button><br>";
+                            echo "<button type='button' class='btn btn-default' style='background-color:white'><a href='./signup/signup.php'  style='text-decoration:none'> SignUp</a> </button>";
+                        }
+                        ?>
                     </div>
                 </li>
                 <!-- <li class="nav-item dropdown">

@@ -47,9 +47,15 @@ session_start();
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             My Account
                         </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                        <a class="dropdown-item" href="./signup/login.php"> Login</a>
-                        <a class="dropdown-item" href="./signup/signup.php"> SignUp</a>
+                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                        <?php                
+                        if (isset($_SESSION['user'])){
+                           echo "<button type='button' class='btn btn-default' style='background-color:white'><a href='./signup/logout.php'  style='text-decoration:none'> Log Out</a> </button>";
+                        }else{
+                            echo "<button type='button' class='btn btn-default' style='background-color:white'><a href='./signup/login.php'  style='text-decoration:none'> Log In</a> </button><br>";
+                            echo "<button type='button' class='btn btn-default' style='background-color:white'><a href='./signup/signup.php'  style='text-decoration:none'> SignUp</a> </button>";
+                        }
+                        ?>
                     </div>
                 </li>
 
