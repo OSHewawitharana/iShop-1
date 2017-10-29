@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require ("../../db_connect.php");
 ?>
 
 
@@ -19,7 +20,7 @@ session_start();
     <!--  Material Dashboard CSS    -->
     <link href="../assets/css/material-dashboard.css?v=1.2.0" rel="stylesheet" />
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="../assets/css/demo.css" rel="stylesheet" />
+    <!-- //<link href="../assets/css/demo.css" rel="stylesheet" /> -->
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
@@ -121,89 +122,68 @@ session_start();
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-11">
                             <div class="card">
                                 <div class="card-header" data-background-color="purple">
                                     <h4 class="title">Edit Profile</h4>
-                                    <p class="category">Complete your profile</p>
                                 </div>
                                 <div class="card-content">
-                                    <form>
+                                    <form action="user.php" method="post">
+                                        <div class="row">
+                                              <div class="col-md-5">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Admin ID</label>
+                                                    <input id="adminid" name="adminid" type="text" class="form-control">
+                                                </div>
+                                            </div>  
+                                            <!-- <div class="col-md-5">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Username</label>
+                                                    <input id="username" name="username" type="text" class="form-control">
+                                                </div>
+                                            </div>   -->
+                                        </div>
                                         <div class="row">
                                             <div class="col-md-5">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Company (diabled)</label>
-                                                    <input type="text" class="form-control" disabled>
+                                                    <label class="control-label">First Name</label>
+                                                    <input id="fname" name="fname" type="text" class="form-control">
                                                 </div>
                                             </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Username</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Email address</label>
-                                                    <input type="email" class="form-control">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Fist Name</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-5">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Last Name</label>
-                                                    <input type="text" class="form-control">
+                                                    <input id="lname" name="lname" type="text" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Address</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
+                                            <div class="col-md-5">
+                                                  <div class="form-group label-floating">
+                                                      <label class="control-label">Email address</label>
+                                                      <input id="email" name="email" type="email" class="form-control">
+                                                  </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">City</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
+                                            <div class="col-md-5">
+                                                  <div class="form-group label-floating">
+                                                      <label class="control-label">Address</label>
+                                                      <input id="address" name="address" type="text" class="form-control">
+                                                  </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Country</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Postal Code</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
+                                       </div>
+                                         <div class="row">
+                                            <div class="col-md-10">
                                                 <div class="form-group">
                                                     <label>About Me</label>
                                                     <div class="form-group label-floating">
-                                                        <p>about me</p>
-                                                        <textarea class="form-control" rows="5"></textarea>
+                                                        <textarea id="aboutme" name="aboutme" class="form-control" rows="1"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
                                         <div class="clearfix"></div>
+
                                     </form>
                                 </div>
                             </div>
@@ -211,6 +191,24 @@ session_start();
                     </div>
                 </div>
             </div>
+             <!--   Core JS Files   -->
+                <script src="../assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+                <script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+                <script src="../assets/js/material.min.js" type="text/javascript"></script>
+                <!--  Charts Plugin -->
+                <script src="../assets/js/chartist.min.js"></script>
+                <!--  Dynamic Elements plugin -->
+                <script src="../assets/js/arrive.min.js"></script>
+                <!--  PerfectScrollbar Library -->
+                <script src="../assets/js/perfect-scrollbar.jquery.min.js"></script>
+                <!--  Notifications Plugin    -->
+                <script src="../assets/js/bootstrap-notify.js"></script>
+                <!--  Google Maps Plugin    -->
+                <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+                <!-- Material Dashboard javascript methods -->
+                <script src="../assets/js/material-dashboard.js?v=1.2.0"></script>
+                <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+                <script src="../assets/js/demo.js"></script>
             <footer class="footer">
                 <div class="container-fluid">
                    <p class="m-0 text-center text-white">Copyright &copy; iShop 2017</p>
@@ -218,24 +216,30 @@ session_start();
             </footer>
         </div>
     </div>
-</body>
-<!--   Core JS Files   -->
-<script src="../assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
-<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="../assets/js/material.min.js" type="text/javascript"></script>
-<!--  Charts Plugin -->
-<script src="../assets/js/chartist.min.js"></script>
-<!--  Dynamic Elements plugin -->
-<script src="../assets/js/arrive.min.js"></script>
-<!--  PerfectScrollbar Library -->
-<script src="../assets/js/perfect-scrollbar.jquery.min.js"></script>
-<!--  Notifications Plugin    -->
-<script src="../assets/js/bootstrap-notify.js"></script>
-<!--  Google Maps Plugin    -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-<!-- Material Dashboard javascript methods -->
-<script src="../assets/js/material-dashboard.js?v=1.2.0"></script>
-<!-- Material Dashboard DEMO methods, don't include it in your project! -->
-<script src="../assets/js/demo.js"></script>
 
+<?php 
+      /*var_dump($conn);
+      echo "A";*/
+  if (isset($_POST['user'])) {
+      $adminid = $_POST['adminid'];
+      /*$username = $_POST['username'];*/
+      $fname = $_POST['fname'];
+      $lname = $_POST['lname'];
+      $email = $_POST['email'];
+      $address = $_POST['address'];
+      $aboutme = $_POST['aboutme'];
+     
+
+      $query1= "UPDATE `Administrator` SET `fname`=$fname,`lname`=$lname,`email`=$email,`address`=$address,`aboutme`=$aboutme, WHERE `adminid`=$adminid" ;
+
+      /*var_dump($query1);*/
+
+      $query_run1 = mysqli_query($conn , $query1);
+
+      /*var_dump($query_run1);*/
+}
+  $conn->close();
+  ?>
+
+</body>
 </html>

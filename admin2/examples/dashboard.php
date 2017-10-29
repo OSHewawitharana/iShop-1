@@ -21,6 +21,14 @@ session_start();
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+
+    <style type="text/css">
+    header,
+    main,
+    footer {
+      padding-left: 240px;
+    }
+</style>
 </head>
 
 <body>
@@ -225,6 +233,63 @@ session_start();
                             </div>
                         </div>
                     </div>
+    <div class="row">
+      <div class="col s6">
+        <div style="padding: 35px;" align="center" class="card">
+          <div class="row">
+            <div class="left card-title">
+              <b>Shop List</b>
+            </div>
+          </div>
+
+          <div class="row">
+            <a href="#!">
+              <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
+                <img src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989968/seller_rcnkab.png" class="responsive-img" /><br>
+                <span class="indigo-text text-lighten-1"><h5>Seller Info</h5></span>
+              </div>
+            </a>
+            <div class="col s1">&nbsp;</div>
+            <div class="col s1">&nbsp;</div>
+
+            <a href="#!">
+              <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
+                <img src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989969/people_2_knqa3y.png" class="responsive-img" /><br>
+                <span class="indigo-text text-lighten-1"><h5>Ratings</h5></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s6">
+        <div style="padding: 35px;" align="center" class="card">
+          <div class="row">
+            <div class="left card-title">
+              <b>Requests</b>
+            </div>
+          </div>
+          <div class="row">
+            <a href="#!">
+              <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
+                <img src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989970/product_mdq6fq.png" class="responsive-img" /><br>
+                <span class="indigo-text text-lighten-1"><h5>Subscribe Requests</h5></span>
+              </div>
+            </a>
+
+            <div class="col s1">&nbsp;</div>
+            <div class="col s1">&nbsp;</div>
+
+            <a href="#!">
+              <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
+                <img src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989970/stack_rwg2mz.png" class="responsive-img" /><br>
+                <span class="indigo-text text-lighten-1"><h5>Unsubscribe Requests</h5></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card">
