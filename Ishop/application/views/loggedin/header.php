@@ -36,9 +36,6 @@
               <a class="nav-link" href="<?php echo base_url(); ?>">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('Home/about'); ?>">About</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url('Home/services'); ?>">Services</a>
             </li>
             <li class="nav-item">
@@ -47,17 +44,20 @@
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url(); ?>">FAQ</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url('Home/about'); ?>">About</a>
+            </li>
             
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <?php echo $this->session->userdata('fname'). " " .$this->session->userdata('lname'); ?>
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                <a class="dropdown-item" href="<?php echo base_url('Manager/Home'); ?>">1 Profile</a>
-                <a class="dropdown-item" href="<?php echo base_url('Login/logout'); ?>">2 Logout</a>
+                <a class="dropdown-item" href="<?php echo base_url('ShopOwner/Home'); ?>"> Profile</a>
+                <a class="dropdown-item" href="<?php echo base_url('Login/logout'); ?>"> Logout</a>
               </div>
             </li> 
-                     
+
           </ul>
         </div>
       </div>

@@ -33,7 +33,7 @@ class Model_user extends CI_Model
 		$this->db->where('email',$email);
 		$this->db->where('password',$password);
 
-		$respond = $this->db->get('employee');
+		$respond = $this->db->get('shop_owner');
 
 		if ($respond->num_rows()==1) {
 				return $respond->row(0);

@@ -35,9 +35,6 @@
               <a class="nav-link" href="<?php echo base_url(); ?>">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('Home/about'); ?>">About</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url('Home/services'); ?>">Services</a>
             </li>
             <li class="nav-item">
@@ -47,10 +44,13 @@
               <a class="nav-link" href="<?php echo base_url(); ?>">FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url(); ?>">LogIn</a>
+              <a class="nav-link" href="<?php echo base_url('Home/about'); ?>">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url(); ?>">Register Now!</a>
+              <a class="nav-link" href="<?php echo base_url('Login/LoginUser'); ?>">LogIn</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url('Register/RegisterUser'); ?>">Register Now!</a>
             </li>
             
             <!--  <li class="nav-item">
