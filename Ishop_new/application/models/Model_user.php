@@ -140,12 +140,11 @@ class Model_user extends CI_Model
 
         $data = array(
                'user_name' => $this->input->post('username'),
-               'password' => sha1($this->input->post('password')),
                'full_name' => $this->input->post('fullname'),
                'nic' => $this->input->post('NIC'),
                'contact_number' => ($this->input->post('contactNumber')),
                'address' => ($this->input->post('address')),
-               'image'=>($this->input->post('wizard-picture')),
+               'image'=>($this->input->post('wizard-picture'))
            );
 
         $this->db->where('user_id',$stu_id);
@@ -182,17 +181,5 @@ class Model_user extends CI_Model
         return $query->result();
 	}
 
-function ContactUser(){
-
-    $data = array(
-
-    'full_name' => $this->input->post('fullname', TRUE),
-    'tele_number' => $this->input->post('telenumber', TRUE),
-    'email' => $this->input->post('email',TRUE),
-    'message' => $this->input->post('message',TRUE),
-
-  );
-    $this->db->insert('contact',$data);
-    }
 
 }

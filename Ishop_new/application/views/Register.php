@@ -1,12 +1,11 @@
-    <?php if ($this->session->userdata('loggedin')) {
+<?php if ($this->session->userdata('loggedin')) {
       include 'loggedin/header.php';
     }
     else{
        include 'partials/header.php';
     }
-
-    ?>
-
+    
+?>
     
 <script type="text/javascript">
     var check = function() {

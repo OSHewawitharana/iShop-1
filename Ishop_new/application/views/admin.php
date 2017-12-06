@@ -4,7 +4,7 @@
     else{
        include 'partials/header.php';
     }
-
+    
 ?>
 
 
@@ -12,8 +12,8 @@
     <div class="container" style="min-height: 500px">
 
       <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">Welcome to the Administration,
-        <small><?php echo $this->session->userdata('full_name'); ?>..</small>
+      <h1 class="mt-4 mb-3"><i class="fa fa-users fa-2x" aria-hidden="true"></i> Welcome to Dashboard,
+        <small><?php echo $this->session->userdata('full_name'); ?></small>
       </h1>
 
       <ol class="breadcrumb">
@@ -39,19 +39,24 @@
         <!-- Content Column -->
         <div class="col-lg-9 mb-4">
 
-        <div class="row">
-        <div class="col-lg-8 mb-4">
-          <h2>Personal Details</h2><br>
-        </div>
+            <center><h2>Personal Details</h2><br>
+            <img class="img-circle" src="<?php echo base_url(); ?>assets/images/profile.jpg" style="width: 200px; height: 200px;" /><br></center>
 
-        <div class="col-lg-4 mb-4">
-          <div class="profile-header-container">   
-              <div class="profile-header-img">
-                <img class="img-circle" src="<?php echo base_url(); ?>assets/images/profile.jpg" style="width: 200px; height: 200px; position: absolute;" />
-              </div>
+        <!-- <div class="row">
+          <div class="col-lg-6 mb-4">
+            <h2>Personal Details</h2><br>
           </div>
+
+          <div class="col-lg-4 mb-4">
+            <div class="profile-header-container"> 
+
+                <div class="profile-header-img">
+                  <img class="img-circle" src="<?php echo base_url(); ?>assets/images/profile.jpg" style="width: 200px; height: 200px;" />
+                </div>
+
+            </div>
           </div>
-        </div>
+        </div> -->
 
           <div class="caption">
                           <table class="table" style="font-size: 22px">

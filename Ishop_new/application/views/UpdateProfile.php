@@ -9,14 +9,14 @@
 
 <div class='container'>
 
-<h1 class="mt-4 mb-3"><i class="fa fa-user fa-2x" aria-hidden="true"></i> User Profile</h1>
+<h1 class="mt-4 mb-3"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i> Update Your Profile</h1>
 
 
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="<?php echo base_url(); ?>">Home</a>
         </li>
-        <li class="breadcrumb-item active">User Profile</li>
+        <li class="breadcrumb-item active">Update Your Profile</li>
     </ol>
 
     <div class="row">
@@ -26,7 +26,7 @@
 
             <!-- <div class="col-md-6" style="margin-top: 30px; "> -->
 
-                <?php echo form_open('ManageUsers/editUser/'.$row->user_id); ?>
+                <?php echo form_open('ManageUsers/updateProfile/'.$row->user_id); ?>
 
                 <div class="form-group">
                     <label for="sid">User ID</label>
@@ -34,15 +34,15 @@
                 </div>
                 <div class="form-group">
                     <label for="regno">Full Name</label>
-                    <input type="text" class="form-control" id="sregno" name="fullname" value="<?php echo $row->full_name ?>" readonly>
+                    <input type="text" class="form-control" id="sregno" name="fullname" value="<?php echo $row->full_name ?>">
                 </div>
                 <div class="form-group">
                     <label for="sname">Address</label>
-                    <input type="text" class="form-control" id="sname" name="address" value="<?php echo $row->address ?>" readonly>
+                    <input type="text" class="form-control" id="sname" name="address" value="<?php echo $row->address ?>">
                 </div>
                 <div class="form-group">
                     <label for="sname">NIC</label>
-                    <input type="text" class="form-control" id="sname" name="NIC" value="<?php echo $row->nic ?>" readonly>
+                    <input type="text" class="form-control" id="sname" name="NIC" value="<?php echo $row->nic ?>">
                 </div>
                 <div class="form-group">
                     <label for="suni">Email</label>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="form-group">
                     <label for="sname">Contact Number</label>
-                    <input type="text" class="form-control" id="sname" name="contactNumber" value="<?php echo $row->contact_number ?>" readonly>
+                    <input type="text" class="form-control" id="sname" name="contactNumber" value="<?php echo $row->contact_number ?>">
                 </div>
 
         </div>
@@ -61,14 +61,14 @@
 
             <div class="form-group">
                 <label for="sname">Shop Name</label>
-                <input type="text" class="form-control" id="sname" name="shopName" value="<?php echo $row2->shop_name ?>" readonly>
+                <input type="text" class="form-control" id="sname" name="shopName" value="<?php echo $row2->shop_name ?>">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Shop Category</label>
-                <select id="" class="form-control" name="shopCategory" value="<?php echo $row2->shop_category ?>" readonly>
+                <select id="" class="form-control" name="shopCategory" value="<?php echo $row2->shop_category ?>">
                     <option value="" disabled="disabled">Select Shop Category</option>
 
-                    <option <?=$row2->shop_category =="Books and Stationary" ? "selected" : ""?> value="Books and Stationary"  readonly>Books and Stationary</option>
+                    <option <?=$row2->shop_category =="Books and Stationary" ? "selected" : ""?> value="Books and Stationary">Books and Stationary</option>
 
                     <option <?=$row2->shop_category =="Cellular and Communication" ? "selected" : ""?> value="Cellular and Communication">Cellular and Communication</option>
 
@@ -111,29 +111,27 @@
 
             <div class="form-group">
                 <label for="sname">Shop Contact Number</label>
-                <input type="text" class="form-control" id="sname" name="ShopcontactNumber" value="<?php echo $row2->shop_contact_number ?>" readonly>
+                <input type="text" class="form-control" id="sname" name="ShopcontactNumber" value="<?php echo $row2->shop_contact_number ?>">
             </div>
 
             <div class="form-group">
                 <label for="sname">Shop Address</label>
-                <input type="text" class="form-control" id="sname" name="shopAddress" value="<?php echo $row2->shop_address ?>" readonly>
+                <input type="text" class="form-control" id="sname" name="shopAddress" value="<?php echo $row2->shop_address ?>">
             </div>
 
             <div class="form-group">
                 <label for="sname">Description</label>
-                <input type="text" class="form-control" id="sname" name="description" value="<?php echo $row2->description ?>" readonly>
+                <input type="text" class="form-control" id="sname" name="description" value="<?php echo $row2->description ?>">
             </div>
-
-            <hr>
-            <a href="<?php echo base_url('Requests/viewRequests'); ?>" class='btn btn-primary btn-lg' name='back' style='margin-left: 80px;'>Back</a>
-
-            <a href="<?php echo base_url('ManageUsers/acceptUser/'.$row->user_id); ?>" class='btn btn-success btn-lg' name='back' style='margin-left: 80px;' onclick="return checkAccept()">Accept</a>
-
-            <a href="<?php echo base_url('ManageUsers/RejectUser/'.$row->user_id); ?>" class='btn btn-danger btn-lg' name='back' style='margin-left: 80px;' onclick="return checkDelete()">Reject</a>
 
         </div>
     </div>
 
+     
+<hr>
+<a href="<?php echo base_url('ShopOwner/Home'); ?>" class='btn btn-primary' name='back' style='margin-left: 400px;'>Back</a>
+
+<button class='btn btn-success' name='update' style='margin-left: 150px;'>Update</button>
 <?php echo form_close(); ?>
 
 

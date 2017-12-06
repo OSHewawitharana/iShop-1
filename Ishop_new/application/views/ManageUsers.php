@@ -1,17 +1,16 @@
-<?php 
-	if ($this->session->userdata('loggedin')) {
-	    include 'loggedin/header.php';
-	}
-	else{
-	    include 'partials/header.php';
-	}
+<?php if ($this->session->userdata('loggedin')) {
+      include 'loggedin/header.php';
+    }
+    else{
+       include 'partials/header.php';
+    }
+    
 ?>
-
 
 
 <div class="container" style="min-height: 500px">
 
-    <h1 class="mt-4 mb-3">Registered users in the System </h1>
+    <h1 class="mt-4 mb-3"><i class="fa fa-user fa-2x" aria-hidden="true"></i> Registered users in the System </h1>
 
 
     <ol class="breadcrumb">

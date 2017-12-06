@@ -1,16 +1,15 @@
-<?php 
-    if ($this->session->userdata('loggedin')) {
-        include 'loggedin/header.php';
+<?php if ($this->session->userdata('loggedin')) {
+      include 'loggedin/header.php';
     }
     else{
        include 'partials/header.php';
     }
-
+    
 ?>
 
 <div class='container'>
 
-<h1 class="mt-4 mb-3">Update User Details </h1>
+<h1 class="mt-4 mb-3"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i> Update User Details </h1>
 
 
     <ol class="breadcrumb">
@@ -27,7 +26,7 @@
 
             <!-- <div class="col-md-6" style="margin-top: 30px; "> -->
 
-                <?php echo form_open('ManageUsers/editUser/'.$row->user_id); ?>
+            <?php echo form_open('ManageUsers/editUser/'.$row->user_id); ?>
 
                 <div class="form-group">
                     <label for="sid">User ID</label>
@@ -125,16 +124,15 @@
                 <input type="text" class="form-control" id="sname" name="description" value="<?php echo $row2->description ?>">
             </div>
 
+            <a href="<?php echo base_url('ManageUsers/viewUsers'); ?>" class='btn btn-primary' name='back' style='margin-left: 150px;'>Back</a>
+
+            <button class='btn btn-success' name='update' style='margin-left: 80px;'>Update</button>
+            <?php echo form_close(); ?>
+
+            <hr>
+
         </div>
     </div>
-
-     
-<hr>
-<a href="<?php echo base_url('ManageUsers/viewUsers'); ?>" class='btn btn-primary' name='back' style='margin-left: 400px;'>Back</a>
-
-<button class='btn btn-success' name='update' style='margin-left: 150px;'>Update</button>
-<?php echo form_close(); ?>
-
 
 </div>
 
