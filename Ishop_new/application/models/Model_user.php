@@ -182,5 +182,17 @@ class Model_user extends CI_Model
         return $query->result();
 	}
 
+function ContactUser(){
+
+    $data = array(
+
+    'full_name' => $this->input->post('fullname', TRUE),
+    'tele_number' => $this->input->post('telenumber', TRUE),
+    'email' => $this->input->post('email',TRUE),
+    'message' => $this->input->post('message',TRUE),
+
+  );
+    $this->db->insert('contact',$data);
+    }
 
 }

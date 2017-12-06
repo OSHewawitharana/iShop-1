@@ -8,49 +8,46 @@
 
     ?>
 
-
     <!-- Page Content -->
     <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
-        <h1 class="mt-4 mb-3">Contact <small>Us !</small></h1>
+        <h1 class="mt-4 mb-3">Contact <small>Offer !</small></h1>
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="index.html">Home</a>
+                <a href="DailyOffers/viewDailyOffers">Contact Offer</a>
             </li>
-            <li class="breadcrumb-item active">Contact</li>
+            <li class="breadcrumb-item active">Details</li>
         </ol>
 
-        <!-- Content Row -->
-        <div class="row">
-            <!-- Map Column -->
-            <div class="col-lg-8 mb-4">
-                <!-- Embedded Google Map -->
-                <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
-            </div>
-            <!-- Contact Details Column -->
-            <div class="col-lg-4 mb-4">
-                <h3>Contact Details</h3>
-                <p>
-                    57, Union Place
-                    <br>Colombo 05, Sri Lanka.
-                    <br>
-                </p>
-                <p>
-                    <abbr title="Phone">Phone</abbr>: (123) 456-7890
-                </p>
-                <p>
-                    <abbr title="Email">Email</abbr>: <a href="mailto:oshewawitharana123@gmail.com">oshewawitharana123@teamishop.com
-                    </a>
-                </p>
-                <p>
-                    <abbr title="Hours">Hours</abbr>: Monday - Friday: 9:00 AM to 10:00 PM
-                </p>
-            </div>
-        </div>
-        <!-- /.row -->
+        <div class="col-lg-8">
+            <div class="table-responsive">
+            <table class="table table-striped">
+                 <?php if (count($records)): ?>
 
+                 <?php foreach($records as $row):  ?>
+                    <tr>
+                        <td>Shop Name</td>
+                        <td><?php echo $row->shop_name ?></td>
+                    </tr>
+                    <tr>
+                        <td>Shop Category</td>
+                        <td><?php echo $row->shop_category ?></td>
+                    </tr>
+                    <tr>
+                        <td>Shop Address</td>
+                        <td><?php echo $row->shop_address ?></td>
+                    </tr>
+                    <tr>
+                        <td>Contact Number</td>
+                        <td><?php echo $row->shop_contact_number ?></td>
+                    </tr>        
+                <?php endforeach ?>
+
+            <?php endif ?>
+            </table>          
+        </div>
         <!-- Contact Form -->
         <div class="row">
             <div class="col-lg-8 mb-4">
@@ -89,10 +86,5 @@
             </div>
             <?php echo form_close(); ?>
         </div>
-        <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
-
-    
+        <!-- /.row -->    
    <?php include 'partials/footer.php'; ?>

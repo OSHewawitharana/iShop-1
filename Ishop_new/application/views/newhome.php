@@ -81,21 +81,6 @@
             <a href="#"><img class="card-img-top" src="<?php echo base_url(); ?>assets/images/4.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Add daily offers</a>
-              </h4>
-              <p class="card-text">
-                  
-
-                  Make your cusotmer known of what offers you run on that day! You can run promotional period of offers as well.
-                  </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="<?php echo base_url(); ?>assets/images/4.jpg" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
                 <a href="#">Make use of Beacon</a>
               </h4>
               <p class="card-text">
@@ -106,6 +91,22 @@
             </div>
           </div>
         </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="<?php echo base_url(); ?>assets/images/4.jpg" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="<?php echo base_url('DailyOffers/viewDailyOffers') ?>">Add daily offers</a>
+              </h4>
+              <p class="card-text">
+                  
+
+                  Make your cusotmer known of what offers you run on that day! You can run promotional period of offers as well.
+                  </p>
+            </div>
+          </div>
+        </div>
+  
       </div>
 
       <div class="row">
