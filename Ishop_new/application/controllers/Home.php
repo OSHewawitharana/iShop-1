@@ -35,4 +35,10 @@ class Home extends CI_Controller {
 		$this->load->view('Services');
 	}
 
+	public function dailyoffers()
+	{	
+		$this->load->view('DailyOffers');
+	}
+
+
 }
