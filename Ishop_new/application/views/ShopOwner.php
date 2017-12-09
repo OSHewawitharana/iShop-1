@@ -29,8 +29,9 @@
           <div class="list-group text-center" >
             <a href="<?php echo base_url('Manager/Home'); ?>" class="list-group-item active">Profile</a>
             <a href="<?php echo base_url('Register/RegisterUser'); ?>" class="list-group-item">Manage Items</a>
-            <a href="<?php echo base_url('ManageUsers/viewUsers'); ?>" class="list-group-item">Manage Discounts</a>
+            <a href="<?php echo base_url('ManageDiscounts/viewDiscounts/'.$_SESSION['user_id']); ?>" class="list-group-item">Manage Discounts</a>
             <a href="<?php echo base_url('Projects/viewProjects'); ?>" class="list-group-item">View Ratings</a>
+            <a href="<?php echo base_url('adminDiagrams'); ?>" class="list-group-item">View Reports</a>
           </div>
           <br>
           <h4><i class="fa fa-cogs fa-2x" aria-hidden="true"></i> Account Settings</h4>
@@ -38,11 +39,11 @@
           <div class="list-group text-center">
             <a href="<?php echo base_url('ManageUsers/updateProfile/'.$_SESSION['user_id']); ?>" class="list-group-item active">Update Profile</a>
           </div><br>
-          <div class="list-group text-center">
-            <a href="<?php echo base_url('Register/RegisterUser'); ?>" class="list-group-item active">Disable Account</a>
+          <div>
+            <a href="<?php echo base_url('ShopOwner/deactivateUser/'.$_SESSION['user_id']); ?>" class="list-group-item active"> <button type='submit' class='btn btn-success' style="margin-bottom: 10px" onclick="return checkDeactivateUser()">Yes, Deactivate My Account!</button></a>
           </div><br>
           <div class="list-group text-center">
-            <a href="<?php echo base_url('ManageUsers/viewUsers'); ?>" class="list-group-item active">Deactivate Account</a>
+            <a href="<?php echo base_url('TransactionUpdate/viewUsers/'.$_SESSION['user_id']); ?>" class="list-group-item active">Transaction Table</a>
           </div>
         </div>
         <!-- Content Column -->
@@ -108,8 +109,6 @@
                             </tbody>
                           </table>
                         </div>
-
-          <p> </p>
         </div>
       </div>
       <!-- /.row -->

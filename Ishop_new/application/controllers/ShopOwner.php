@@ -15,4 +15,10 @@ class ShopOwner extends CI_Controller
 		$this->load->view('admin');
 	}
 
+	public function deactivateUser($user_id){
+		$this->load->model('Model_user');
+		$this->Model_user->deactivateAccount($user_id);
+
+	}
+
 }

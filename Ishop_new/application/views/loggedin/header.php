@@ -23,6 +23,9 @@
       function checkAccept(){
         return confirm('Are you sure you want to Accept this user?');
       }
+      function checkDeactivateUser(){
+        return confirm('Are you sure you want to Deactivate? You may want to contact the Administrator to Re-activate the account!');
+      }
     </script>
 
   </head>
