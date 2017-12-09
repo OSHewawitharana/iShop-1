@@ -55,9 +55,9 @@
                     <th>Remove</th>
                 </tr>
 
-                <?php if (count($records)): ?>
+                <?php if (count($users)): ?>
 
-                    <?php foreach ($records as $row): ?>
+                    <?php foreach ($users as $row): ?>
 
                     <tr>
                         <td class="text-center"><?php echo $row->user_id; ?></td>
@@ -65,8 +65,8 @@
                         <td><?php echo $row->user_name; ?></td>
                         <td><?php echo $row->nic; ?></td>
                         <td><?php echo $row->address; ?></td>
-                        <th><a href="<?php echo base_url('ManageUsers/editUser/'.$row->user_id) ?>"><button type='submit' class='btn btn-warning'>Update</button></a></th>
-                        <th><a href="<?php echo base_url('ManageUsers/RemoveUser/'.$row->user_id) ?>"><button type='submit' class='btn btn-danger' onclick="return checkDelete()">Delete</button></a></th>
+                        <td><a href="<?php echo base_url('ManageUsers/editUser/'.$row->user_id) ?>"><button type='submit' class='btn btn-warning'>Update</button></a></td>
+                        <td><a href="<?php echo base_url('ManageUsers/RemoveUser/'.$row->user_id) ?>"><button type='submit' class='btn btn-danger' onclick="return checkDelete()">Delete</button></a></td>
                     </tr>
 
                     <?php endforeach; ?>
@@ -77,6 +77,7 @@
 
             </table>
             <hr>
+            <div class="pagination justify-content-center"><?php echo $link ?></div>  
         </div>
     </div>
 </div>

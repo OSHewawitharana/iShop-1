@@ -27,11 +27,15 @@
         <!-- Sidebar Column -->
         <div class="col-lg-3 mb-4">
           <div class="list-group text-center" >
-            <a href="<?php echo base_url('Manager/Home'); ?>" class="list-group-item active">Profile</a>
-            <a href="<?php echo base_url('Register/RegisterUser'); ?>" class="list-group-item">Manage Items</a>
-            <a href="<?php echo base_url('ManageUsers/viewUsers'); ?>" class="list-group-item">Manage Discounts</a>
-            <a href="<?php echo base_url('Projects/viewProjects'); ?>" class="list-group-item">View Ratings</a>
+            <a href="<?php echo base_url('ShopOwner/Home'); ?>" class="list-group-item active">Profile</a>
+            <a href="<?php echo base_url('itemController/addItem'); ?>" class="list-group-item">Add Item Details</a>
+            <a href="<?php echo base_url('itemController/viewItems'); ?>" class="list-group-item">View Item Details</a>
+            <a href="<?php echo base_url('ManageDiscounts/viewDiscounts/'.$_SESSION['user_id']); ?>" class="list-group-item">Manage Discounts</a>
+            <a href="<?php echo base_url('TransactionUpdate/viewUsers/'.$_SESSION['user_id']); ?>" class="list-group-item">Transaction Table</a>
+            <a href="<?php echo base_url(''); ?>" class="list-group-item">View Ratings</a>
+            <a href="<?php echo base_url('ShopOwner/Reports'); ?>" class="list-group-item">Reports</a>
           </div>
+
           <br>
           <h4><i class="fa fa-cogs fa-2x" aria-hidden="true"></i> Account Settings</h4>
           <br>
@@ -39,10 +43,7 @@
             <a href="<?php echo base_url('ManageUsers/updateProfile/'.$_SESSION['user_id']); ?>" class="list-group-item active">Update Profile</a>
           </div><br>
           <div class="list-group text-center">
-            <a href="<?php echo base_url('Register/RegisterUser'); ?>" class="list-group-item active">Disable Account</a>
-          </div><br>
-          <div class="list-group text-center">
-            <a href="<?php echo base_url('ManageUsers/viewUsers'); ?>" class="list-group-item active">Deactivate Account</a>
+            <a href="<?php echo base_url('ShopOwner/deactivateUser/'.$_SESSION['user_id']); ?>" class="list-group-item active" onclick="return checkDeactivateUser()">Deactivate My Account!</a>
           </div>
         </div>
         <!-- Content Column -->
@@ -108,7 +109,6 @@
                             </tbody>
                           </table>
                         </div>
-
           <p> </p>
         </div>
       </div>

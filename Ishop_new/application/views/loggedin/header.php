@@ -15,6 +15,7 @@
     <link href="<?php echo base_url(); ?>assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url(); ?>assets/css/modern-business.css" rel="stylesheet">
+    
 
     <script type="text/javascript">
       function checkDelete(){
@@ -22,6 +23,9 @@
       }
       function checkAccept(){
         return confirm('Are you sure you want to Accept this user?');
+      }
+      function checkDeactivateUser(){
+        return confirm('Are you sure you want to Deactivate this Account?\nYou need to contact Administration to Reactivate the Account!!!');
       }
     </script>
 

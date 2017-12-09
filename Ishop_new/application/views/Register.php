@@ -6,7 +6,8 @@
     }
     
 ?>
-    
+
+
 <script type="text/javascript">
     var check = function() {
         if (document.getElementById('password').value ==

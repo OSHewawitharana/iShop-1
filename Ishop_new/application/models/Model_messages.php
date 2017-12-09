@@ -6,7 +6,7 @@
 class Model_messages extends CI_Model
 {
 	
-	function getMessages() {
+	public function getMessages() {
 		
 		$this->db->select('*');
 		$this->db->from('contact');
