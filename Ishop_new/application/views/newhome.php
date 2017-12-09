@@ -66,7 +66,7 @@
             <a href="#"><img class="card-img-top" src="<?php echo base_url(); ?>assets/images/4.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="<?php echo base_url('Home/login') ?>">Update your Stack</a>
+                <a href="#">Update your Stack</a>
               </h4>
               <p class="card-text">
 
@@ -79,9 +79,11 @@
             <a href="#"><img class="card-img-top" src="<?php echo base_url(); ?>assets/images/4.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="<?php echo base_url('DailyOffers/viewDailyOffers') ?>">Add daily offers</a>
+                <a href="#">Add daily offers</a>
               </h4>
               <p class="card-text">
+                  
+
                   Make your cusotmer known of what offers you run on that day! You can run promotional period of offers as well.
                   </p>
             </div>
@@ -92,9 +94,11 @@
             <a href="#"><img class="card-img-top" src="<?php echo base_url(); ?>assets/images/4.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="Home/register">Make use of Beacon</a>
+                <a href="#">Make use of Beacon</a>
               </h4>
               <p class="card-text">
+                  
+
                   We set up a beacon at the your door step! So what you offer today will reach to every customer passing buy, who uses BLE.
                   </p>
             </div>

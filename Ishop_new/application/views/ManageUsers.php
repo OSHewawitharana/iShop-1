@@ -7,6 +7,7 @@
     
 ?>
 
+
 <div class="container" style="min-height: 500px">
 
     <h1 class="mt-4 mb-3"><i class="fa fa-user fa-2x" aria-hidden="true"></i> Registered users in the System </h1>

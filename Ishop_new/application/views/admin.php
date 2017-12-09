@@ -34,7 +34,6 @@
             <a href="<?php echo base_url('Requests/viewRequests'); ?>" class="list-group-item">User Requests</a>
             <a href="<?php echo base_url('ManageUsers/viewUsers'); ?>" class="list-group-item">Manage Users</a>
             <a href="<?php echo base_url('Messages/viewMessages'); ?>" class="list-group-item">View Messages</a>
-            <a href="<?php echo base_url('adminDiagrams/viewDiagrams'); ?>" class="list-group-item">View Reports</a>
           </div>
         </div>
         <!-- Content Column -->
