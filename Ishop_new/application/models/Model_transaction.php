@@ -18,12 +18,17 @@ public function update($user_id) {
         $this->db->where('shop_shop_id',$user_id);
         $cquantity = $this->db->get()->result_array('quantity');
 
+<<<<<<< HEAD
         $ccquantity = floatval($cquantity);
         $nnquantity = floatval($nquantity);
 
         // var_dump($cquantity);
         // echo $nquantity;
         // echo $ccquantity;
+=======
+        $ccquantity = intval($cquantity);
+        $nnquantity = intval($nquantity);
+>>>>>>> a5f261d051003666d382c2010d2c22aa8c07fb00
 
         $cccquantity = $ccquantity - $nnquantity;
 

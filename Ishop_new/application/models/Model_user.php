@@ -217,6 +217,14 @@ class Model_user extends CI_Model
     return $query->result();
 	}
 
+  function deactivateAccount($user_id){
+    $this->db->set('flag','0');
+    $this->db->where('user_id',$user_id);
+    $this->db->update('owner');
+    $this->session->sess_destroy();
+    redirect('Home/index');
+
+}
 
   function deactivateAccount($user_id){
     
