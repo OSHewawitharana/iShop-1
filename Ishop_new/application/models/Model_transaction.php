@@ -15,21 +15,18 @@ public function update($user_id) {
         $nquantity = $this->input->post('newquantity');
         $this->db->select('quantity');
         $this->db->from('shop_item');
-        $this->db->where('shop_shop_id',$user_id);
-        $cquantity = $this->db->get()->result_array('quantity');
+        $this->db->where('shop_item_id',$user_id);
+        $query = $this->db->get();
+        $result= $query->result_array();
+        $cquantity= $result['0']['quantity'];
 
         $ccquantity = floatval($cquantity);
-        $nnquantity = floatval($nquantity);
-
-        // var_dump($cquantity);
-        // echo $nquantity;
-        // echo $ccquantity;
-
-        $cccquantity = $ccquantity - $nnquantity;
-
-		$this->db->set('quantity',$cccquantity);
-        $this->db->where('shop_item_id',$user_id);
-        $this->db->update('shop_item');
+        $cccquantity = $ccquantity - $nquantity;
+         
+        /* $this->db->set('quantity','quantity-'$ccquantity,false);*/
+		 $this->db->set('quantity',$cccquantity,false);
+         $this->db->where('shop_item_id',$user_id);
+         $this->db->update('shop_item');
 }
 
 function Search($searchkey, $user_id){
