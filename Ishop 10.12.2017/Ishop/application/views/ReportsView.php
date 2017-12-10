@@ -11,15 +11,13 @@
     <div class="container" style="min-height: 500px">
 
       <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">Welcome
-        <small><?php echo $this->session->userdata('full_name'); ?>..</small>
-      </h1>
+      <h1 class="mt-4 mb-3">Report Generation</h1>
 
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="<?php echo base_url(); ?>">Home</a>
         </li>
-        <li class="breadcrumb-item active">Profile</li>
+        <li class="breadcrumb-item active">Reports</li>
       </ol>
 
       <!-- Content Row -->
@@ -44,12 +42,12 @@
             <div class="col-lg-4 mb-4">
               <div class="form-group">
                 <h5>Report Type</h5>
-                <select id="" class="form-control" name="shopCategory" value="">
+                <select id="" class="form-control" name="reportType" value="">
                     <option value="" selected="selected" disabled="disabled">Select Report Type</option>
-                    <option value="Type1">Report Type 1</option>
-                    <option value="Type1">Report Type 1</option>
-                    <option value="Type1">Report Type 1</option>
-                    <option value="Type1">Report Type 1</option>
+                    <option value="Type1">Items Sold</option>
+                    <option value="Type2">Most Sold Items</option>
+                    <option value="Type3">Daily Income</option>
+                    <option value="Type4">Total Income</option>
                 </select>
               </div>
             </div>
